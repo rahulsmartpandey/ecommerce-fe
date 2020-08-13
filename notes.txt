@@ -1,0 +1,13 @@
+Visual studio shortcuts
+
+ctrl + k + u => in .html for commenting
+
+Angular Syntax:
+
+ng g component componentname
+ng serve
+
+FrontEnd crud Examples :
+https://bezkoder.com/angular-crud-app/
+https://www.djamware.com/post/5a792ecb80aca7059c142978/spring-boot-mongodb-and-angular-5-crud-java-web-application
+https://medium.com/@Zeroesandones/how-to-pass-data-from-parent-to-child-component-in-angular-9-dc7a0a64256c

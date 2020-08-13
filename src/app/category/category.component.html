@@ -1,0 +1,24 @@
+
+<div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">RpEcommerce</a>
+      </div>
+      <ul class="nav navbar-nav ">
+        <li class="active" *ngFor="let category of categoryList">
+          <button class="btn btn-success" (click)="getProductsByCategoryId(category)">{{category.name}}</button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="[ '/signup']"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a [routerLink]="[ '/login']"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <app-product *ngIf="productList.length!=0" [products]="productList"></app-product>
+  <div *ngIf="productList.length==0">
+    no products found  for category : {{selectedCategory.name}}
+  </div>
+</div>
