@@ -1,0 +1,53 @@
+<p>product-checkout works!</p>
+
+<div>
+    <h4>Product Name: {{checkedOutProduct.product.name}}</h4>
+    <h4>Quantity: {{checkedOutProduct.quantity}}</h4>
+    {{checkedOutProduct.product.user.userName}}
+</div>
+
+<div class="container">
+    <h1>Address Details</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <form (ngSubmit)="placeOrder()" #addressForm="ngForm">
+          <div class="form-group">
+            <label for="addressline1">Address Line 1</label>
+            <input type="text" class="form-control" [(ngModel)]="address.address1" name="addressline1" required>
+          </div>
+          <div class="form-group">
+            <label for="addressline2">Address line 2</label>
+            <input type="text" class="form-control" [(ngModel)]="address.address2" name="addressline2" required>
+          </div>
+          <div class="form-group">
+            <label for="number">Contact Number</label>
+            <input type="phone" class="form-control" [(ngModel)]="address.contactNumber" name="number" required>
+          </div>
+          <div class="form-group">
+            <label for="code">Pincode</label>
+            <input type="text" class="form-control" [(ngModel)]="address.pincode" name="code" required>
+          </div>
+          <div class="form-group">
+            <label for="mark">Landmark</label>
+            <input type="text" class="form-control" [(ngModel)]="address.landmark" name="mark" required>
+          </div>
+          <div class="form-group">
+            <label for="city1">City</label>
+            <input type="text" class="form-control" [(ngModel)]="address.city" name="city1" required>
+          </div>
+          <div class="form-group">
+            <label for="state1">State</label>
+            <input type="text" class="form-control" [(ngModel)]="address.state" name="state1" required>
+          </div>
+          <div class="form-group">
+            <label for="countryName">Country</label>
+            <input type="text" class="form-control" [(ngModel)]="address.country" name="countryName" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success" [disabled]="!addressForm.form.valid">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -4,10 +4,23 @@ ctrl + k + u => in .html for commenting
 
 Angular Syntax:
 
+To create Component :
 ng g component componentname
+
+To create Service :
+
+ng generate service Servicename
+
 ng serve
 
 FrontEnd crud Examples :
 https://bezkoder.com/angular-crud-app/
 https://www.djamware.com/post/5a792ecb80aca7059c142978/spring-boot-mongodb-and-angular-5-crud-java-web-application
 https://medium.com/@Zeroesandones/how-to-pass-data-from-parent-to-child-component-in-angular-9-dc7a0a64256c
+
+How to use Service in Angular:
+
+https://www.positronx.io/angular-service-tutorial-with-example/
+
+
+How to pass Data between Components in Angular:

@@ -9,7 +9,10 @@ import { CategoryComponent } from './category/category.component';
 import appRoutes from './constants/app.constants';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductCheckOutComponent } from './product-checkout/product-checkout.component';
+import {FormsModule} from '@angular/forms';
+import {ProductService} from './product.service';
 
 @NgModule({
   declarations: [
@@ -18,17 +21,20 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ProductComponent,
     CategoryComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    ProductDetailsComponent,
+    ProductCheckOutComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
      // { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

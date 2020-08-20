@@ -5,7 +5,8 @@ import { ProductComponent } from '../product/product.component';
 import { CategoryComponent } from '../category/category.component';
 import { AppComponent } from '../app.component';
 import { CreateProductComponent } from '../create-product/create-product.component';
-
+import { ProductDetailsComponent } from '../product-details/product-details.component';
+import { ProductCheckOutComponent } from '../product-checkout/product-checkout.component';
 
 const appRoutes: Routes = [
     {
@@ -27,6 +28,12 @@ const appRoutes: Routes = [
     
     {   path: 'createproduct',
         component: CreateProductComponent
+    },
+    {   path: 'productdetails/:productId',
+        component: ProductDetailsComponent
+    },
+    {   path: 'productcheckout',
+        component: ProductCheckOutComponent
     },
     {   path: '',
         component: CategoryComponent
